@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Google Books App</title>
+  <meta name="description" content="Google Books App">
+  <script src="src/js/make-search.js" type="module"></script>
+</head>
+
+<body>
+  <header><a href="https://eremina-official.github.io/google-books-app/">Google Books App</a></header>
+
+  <div class="main">
+    <form class="form js-form">
+      <label for="keyword" class="form__keyword-input-label">Search for books by keywords:</label>
+      <div class="form__keyword-input-wrapper">
+        <input type="text" name="q" id="keyword" class="keyword-input js-keyword-input" maxlength="100" required>
+        <button class="submit-button">Search</button>
+      </div>
+    </form>
+
+    <div class="search-results-container">
+      <div class="search-results">
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
