@@ -20,7 +20,11 @@ function renderSearchResults(searchData) {
       const imageSrc = (item.volumeInfo.imageLinks) 
         ? item.volumeInfo.imageLinks.smallThumbnail 
         : '';
+      const imageAlt = (item.volumeInfo.imageLinks) 
+        ? 'thumbnail' 
+        : 'No image available.';
       thumbnail.setAttribute('src', imageSrc);
+      thumbnail.setAttribute('alt', imageAlt);
       thumbnail.setAttribute('class', 'thumbnail');
 
       const description = document.createElement('p');
