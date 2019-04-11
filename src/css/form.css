@@ -1,0 +1,36 @@
+form {
+  padding-bottom: 30px;
+}
+
+.form__keyword-input-label {
+  display: block;
+}
+
+.form__keyword-input-wrapper {
+  display: flex;
+  padding: 15px 0;
+}
+
+.keyword-input {
+  flex-grow: 1;
+  padding: 6px 3px;
+  border: 1px solid black;
+  border-right: none;
+}
+
+.submit-button {
+  background-color: #0095ff;
+  color: white;
+  border: 1px solid #07c;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #07c;
+}
+
+@media (min-width: 1024px) {
+  form {
+    padding: 15px 0 30px;
+  }
+}
