@@ -33,7 +33,7 @@ function getMoreSearchResults() {
   //console.log(searchResults.getBoundingClientRect());
   //console.log(window.innerHeight);
   if (
-    searchResults.getBoundingClientRect().bottom <= window.innerHeight 
+    searchResults.getBoundingClientRect().bottom <= window.innerHeight * 0.9 
     && !ajaxRequestStatus
   ) {
     ajaxRequestStatus = true;
