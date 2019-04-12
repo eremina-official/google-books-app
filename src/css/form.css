@@ -19,14 +19,14 @@ form {
 }
 
 .submit-button {
-  background-color: #0095ff;
+  background-color: darkgray;
   color: white;
-  border: 1px solid #07c;
+  border: 1px solid gray;
   cursor: pointer;
 }
 
 .submit-button:hover {
-  background-color: #07c;
+  background-color: gray;
 }
 
 @media (min-width: 1024px) {
