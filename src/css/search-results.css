@@ -17,6 +17,12 @@
   text-decoration: underline;
 }
 
+.search-results__item img {
+  display: block;
+  max-width: 70px;
+  padding-bottom: 6px;
+}
+
 .more-results-button {
   font-size: 80%;
   display: inline-block;
