@@ -31,7 +31,7 @@ function makeSearch(event) {
 /* load more search results when the page is scrolled to bottom */
 function getMoreSearchResults() {
   if (
-    searchResults.getBoundingClientRect().bottom <= window.innerHeight * 0.9 
+    searchResults.getBoundingClientRect().bottom <= window.innerHeight * 1.5 
     && !ajaxRequestStatus
   ) {
     ajaxRequestStatus = true;
