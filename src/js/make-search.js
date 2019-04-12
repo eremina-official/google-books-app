@@ -5,9 +5,15 @@ import { renderSearchResults } from './render-results.js';
 //cache DOM, declare variables
 const form = document.querySelector('.js-form');
 const input = document.querySelector('.js-keyword-input');
+const searchResults = document.querySelector('.search-results');
+let currentStartIndex = 0;
+/* ajaxRequestStatus keeps a state of the ajax call to avoid firing multiple ajax requests 
+when the page is scrolled to bottom */
+let ajaxRequestStatus = false;
 
 //bind events
 form.addEventListener('submit', makeSearch);
+window.addEventListener('scroll', getMoreSearchResults);
 
 //function declarations
 /* prevent default form submission and add custom form handling */
@@ -20,6 +26,21 @@ function makeSearch(event) {
 
   const url = composeUrl();
   sendRequest(url);
+}
+
+/* load more search results when the page is scrolled to bottom */
+function getMoreSearchResults() {
+  //console.log(searchResults.getBoundingClientRect());
+  //console.log(window.innerHeight);
+  if (
+    searchResults.getBoundingClientRect().bottom <= window.innerHeight 
+    && !ajaxRequestStatus
+  ) {
+    ajaxRequestStatus = true;
+    currentStartIndex += 10;
+    const url = composeUrl();
+    sendRequest(url);
+  }
 }
 
 /* compose URL to query API with provided keywords */
@@ -35,7 +56,8 @@ function sendRequest(url) {
   fetch(url)
     .then(response => response.json())
     .then(searchData => {
-      renderSearchResults(searchData)
+      renderSearchResults(searchData);
+      ajaxRequestStatus = false;
     })
     .catch(error => console.log(error));
 }
