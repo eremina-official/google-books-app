@@ -3,7 +3,7 @@
 import '../css/search-results.css';
 
 //cache DOM, declare variables
-const searchResults = document.querySelector('.search-results');
+const searchResults = document.querySelector('.js-search-results');
 
 //function declarations
 function renderSearchResults(searchData) {

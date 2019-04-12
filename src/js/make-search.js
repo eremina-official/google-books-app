@@ -5,7 +5,7 @@ import { renderSearchResults } from './render-results.js';
 //cache DOM, declare variables
 const form = document.querySelector('.js-form');
 const input = document.querySelector('.js-keyword-input');
-const searchResults = document.querySelector('.search-results');
+const searchResults = document.querySelector('.js-search-results');
 let currentStartIndex = 0;
 /* ajaxRequestStatus keeps a state of the ajax call to avoid firing multiple ajax requests 
 when the page is scrolled to bottom */
