@@ -7,7 +7,7 @@ const form = document.querySelector('.js-form');
 const input = document.querySelector('.js-keyword-input');
 const searchResults = document.querySelector('.js-search-results');
 let currentStartIndex = 0;
-/* ajaxRequestStatus keeps a state of the ajax call to avoid firing multiple ajax requests 
+/* ajaxRequestStatus keeps state of ajax call to avoid firing multiple ajax requests 
 when the page is scrolled to bottom */
 let ajaxRequestStatus = false;
 
@@ -30,8 +30,6 @@ function makeSearch(event) {
 
 /* load more search results when the page is scrolled to bottom */
 function getMoreSearchResults() {
-  //console.log(searchResults.getBoundingClientRect());
-  //console.log(window.innerHeight);
   if (
     searchResults.getBoundingClientRect().bottom <= window.innerHeight * 0.9 
     && !ajaxRequestStatus
