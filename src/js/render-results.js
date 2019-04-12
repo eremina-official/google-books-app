@@ -15,8 +15,8 @@ function renderSearchResults(searchData) {
       const title = document.createElement('a');
       title.setAttribute('href', item.volumeInfo.infoLink);
       const titleContent = (item.volumeInfo.title) 
-      ? item.volumeInfo.title 
-      : 'No title available';
+        ? item.volumeInfo.title 
+        : 'No title available';
       title.textContent = titleContent;
 
       const thumbnail = document.createElement('img');
