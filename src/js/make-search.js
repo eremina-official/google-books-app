@@ -13,6 +13,11 @@ form.addEventListener('submit', makeSearch);
 /* prevent default form submission and add custom form handling */
 function makeSearch(event) {
   event.preventDefault();
+
+  /* reset variables and clear the page before new search */
+  currentStartIndex = 0;
+  searchResults.innerHTML = '';
+
   const url = composeUrl();
   sendRequest(url);
 }
