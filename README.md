@@ -2,6 +2,8 @@
 
 A task for a junior front-end developer position.
 
+**Demo:** https://eremina-official.github.io/google-books-app/
+
 ### Features:
 - search books by keywords
 - output search results with the following info: book title, image and description
