@@ -5,8 +5,6 @@ const searchResults = document.querySelector('.search-results');
 
 //function declarations
 function renderSearchResults(searchData) {
-  //console.log(searchData.items[0]);
-
   if (searchData.items) {
     for (const item of searchData.items) {
       const searchResultsItem = document.createElement('div');
@@ -14,7 +12,10 @@ function renderSearchResults(searchData) {
 
       const title = document.createElement('a');
       title.setAttribute('href', item.volumeInfo.infoLink);
-      title.textContent = item.volumeInfo.title;
+      const titleContent = (item.volumeInfo.title) 
+      ? item.volumeInfo.title 
+      : 'No title available';
+      title.textContent = titleContent;
 
       const thumbnail = document.createElement('img');
       const imageSrc = (item.volumeInfo.imageLinks) 
