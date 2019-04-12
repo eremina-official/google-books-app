@@ -1,5 +1,7 @@
 /* this module handles rendering search results to the screen */
 
+import '../css/search-results.css';
+
 //cache DOM, declare variables
 const searchResults = document.querySelector('.search-results');
 
