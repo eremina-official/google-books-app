@@ -44,7 +44,7 @@ function getMoreSearchResults() {
 /* compose URL to query API with provided keywords */
 function composeUrl() {
   const keywords = input.value;
-  const encodedKeywords = keywords.replace(/_/g, '+');
+  const encodedKeywords = keywords.replace(/ /g, '+');
   const url = `https://www.googleapis.com/books/v1/volumes?q=${encodedKeywords}&startIndex=${currentStartIndex}`;
   return url;
 }
