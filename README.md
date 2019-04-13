@@ -1,6 +1,6 @@
 ### Google Books app
 
-A task for a junior front-end developer position.
+A task for a junior JavaScript developer position.
 
 **Demo:** https://eremina-official.github.io/google-books-app/
 
