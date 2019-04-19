@@ -19,7 +19,7 @@
 
 .search-results__item img {
   display: block;
-  max-width: 70px;
+  max-height: 120px;
   padding-bottom: 6px;
 }
 
